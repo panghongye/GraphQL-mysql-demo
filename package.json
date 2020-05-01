@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "nodemon src",
     "test": "cross-env NODE_ENV=test nodemon src",
-    "start": "cross-env NODE_ENV=production node src"
+    "start": "cross-env NODE_ENV=production node src",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -29,11 +31,13 @@
     "mysql2": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "sequelize": "latest"
+    "sequelize": "latest",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "cross-env": "latest",
     "graphql-voyager": "latest",
     "nodemon": "latest"
-  }
+  },
+  "snyk": true
 }
